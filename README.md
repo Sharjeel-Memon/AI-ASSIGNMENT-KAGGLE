@@ -263,12 +263,12 @@ Important files for assignment submission:
 Add your screenshots in a `screenshots/` folder.
 
 <p align="center">
-  <img src="screenshots/leaderboard.png" width="650" alt="Kaggle Leaderboard Screenshot"/>
+  <img src="screenshots/LeaderBoard.png" width="650" alt="Kaggle Leaderboard Screenshot"/>
   <br><b>Kaggle Leaderboard Score</b>
 </p>
 
 <p align="center">
-  <img src="screenshots/final_confusion_matrix.png" width="650" alt="Final Confusion Matrix"/>
+  <img src="screenshots/ConfusionMatrix.png" width="650" alt="Final Confusion Matrix"/>
   <br><b>Final Model Confusion Matrix</b>
 </p>
 
