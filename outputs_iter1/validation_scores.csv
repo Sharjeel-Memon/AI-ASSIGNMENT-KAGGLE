@@ -1,0 +1,6 @@
+model_name,balanced_accuracy,normal_accuracy,confusion_matrix_file
+Decision Tree,0.9645613818814985,0.9764285714285714,outputs/confusion_matrix_Decision_Tree.png
+HistGradientBoosting Advanced,0.9639367409718435,0.9846269841269841,outputs/confusion_matrix_HistGradientBoosting_Advanced.png
+Logistic Regression,0.8116602368237333,0.8136031746031746,outputs/confusion_matrix_Logistic_Regression.png
+Naive Bayes,0.6910597586704083,0.827515873015873,outputs/confusion_matrix_Naive_Bayes.png
+K-Means as Classifier,0.404132748965559,0.6172619047619048,outputs/confusion_matrix_K_Means_as_Classifier.png

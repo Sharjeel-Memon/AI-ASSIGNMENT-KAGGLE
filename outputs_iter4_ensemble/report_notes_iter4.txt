@@ -1,0 +1,15 @@
+ASSIGNMENT 3 - ITERATION 4 REPORT NOTES
+=======================================
+
+Iteration 4 used a soft-voting ensemble of multiple HistGradientBoostingClassifier models.
+The models used different tree complexity, regularization, and class weights.
+The averaged probabilities were tuned using validation balanced accuracy.
+Best validation multipliers: {'Low': 1.0, 'Medium': 0.78, 'High': 2.07}
+Validation ensemble balanced accuracy after tuning: 0.97143
+
+Upload order:
+1. submission_iter4_ensemble.csv
+2. submission_iter4_high_plus_02.csv
+3. submission_iter4_high_plus_05.csv
+4. submission_iter4_high_plus_08.csv
+5. submission_iter4_medium_plus_high_plus.csv

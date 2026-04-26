@@ -1,0 +1,60 @@
+ASSIGNMENT 3 REPORT NOTES
+=========================
+
+Competition Overview
+--------------------
+Competition: Playground Series - Season 6, Episode 4: Predicting Irrigation Need
+Problem Type: Multiclass classification
+Target: Irrigation_Need with classes Low, Medium, High
+Evaluation Metric: Balanced Accuracy
+
+Dataset
+-------
+Train shape: (630000, 21)
+Test shape: (270000, 20)
+Target distribution:
+Irrigation_Need
+Low       369917
+Medium    239074
+High       21009
+Name: count, dtype: int64
+
+Preprocessing
+-------------
+Dropped id column from model features.
+Numeric columns: median imputation; scaling for Logistic Regression and K-Means.
+Categorical columns: ordinal encoding for tree/Naive Bayes/HistGradientBoosting; one-hot encoding for Logistic Regression and K-Means.
+Train-validation split: stratified 80/20 split.
+
+Validation Results
+------------------
+                   model_name  balanced_accuracy  normal_accuracy                                                 confusion_matrix_file
+HistGradientBoosting Tuned V2           0.970167         0.982944 outputs_iter2_safe/confusion_matrix_HistGradientBoosting_Tuned_V2.png
+                Decision Tree           0.964561         0.976429                 outputs_iter2_safe/confusion_matrix_Decision_Tree.png
+HistGradientBoosting Advanced           0.963937         0.984627 outputs_iter2_safe/confusion_matrix_HistGradientBoosting_Advanced.png
+          Logistic Regression           0.811660         0.813603           outputs_iter2_safe/confusion_matrix_Logistic_Regression.png
+                  Naive Bayes           0.691060         0.827516                   outputs_iter2_safe/confusion_matrix_Naive_Bayes.png
+        K-Means as Classifier           0.404133         0.617262         outputs_iter2_safe/confusion_matrix_K_Means_as_Classifier.png
+
+K-Fold Cross Validation
+-----------------------
+K-Fold was disabled in the script.
+
+Final Model
+-----------
+Selected model: HistGradientBoosting Tuned V2
+Validation balanced accuracy: 0.97017
+Reason selected: Iteration 2 intentionally uses a tuned HistGradientBoosting model to compare Kaggle generalization against the Iteration 1 Decision Tree.
+
+Failed Attempts and Insights
+----------------------------
+Use the lower-performing models from validation_scores.csv as failed attempts.
+Attach their confusion matrix PNG files from the outputs folder.
+Common insight: K-Means is unsupervised, so its clusters may not match Low/Medium/High labels well.
+Naive Bayes assumes feature independence, which is often unrealistic for tabular agricultural/environmental data.
+Decision Tree may overfit or underfit depending on depth.
+
+Leaderboard
+-----------
+After uploading submission.csv to Kaggle, write your Kaggle score and rank here.
+Attach screenshot showing your name and score.

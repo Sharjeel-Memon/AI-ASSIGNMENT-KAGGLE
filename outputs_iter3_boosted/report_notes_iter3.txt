@@ -1,0 +1,23 @@
+ASSIGNMENT 3 - ITERATION 3 REPORT NOTES
+=======================================
+
+Iteration 3 improvement summary:
+- Added engineered numeric features such as Dryness_Index, Water_Availability, and pH_Distance_from_Optimal.
+- Added categorical combination features such as Crop_Season, Crop_Stage, and Soil_Crop.
+- No extra labeled data was used.
+- Used HistGradientBoostingClassifier with class_weight='balanced'.
+- Tuned prediction probability multipliers on validation data to directly improve balanced accuracy.
+
+Validation results:
+                      model_name  normal_balanced_accuracy  tuned_balanced_accuracy  normal_accuracy  tuned_accuracy                            best_multipliers                                                             confusion_matrix_file                                                       threshold_tuning_file
+HistGradientBoosting V3 Balanced                  0.969055                 0.971469         0.983317        0.978381    {'Low': 1.0, 'Medium': 0.8, 'High': 2.2} outputs_iter3_boosted/confusion_matrix_HistGradientBoosting_V3_Balanced_Tuned.png outputs_iter3_boosted/threshold_tuning_HistGradientBoosting_V3_Balanced.csv
+  HistGradientBoosting V3 Smooth                  0.970405                 0.971063         0.982929        0.980310 {'Low': 1.0, 'Medium': 0.925, 'High': 1.65}   outputs_iter3_boosted/confusion_matrix_HistGradientBoosting_V3_Smooth_Tuned.png   outputs_iter3_boosted/threshold_tuning_HistGradientBoosting_V3_Smooth.csv
+
+Final selected model: HistGradientBoosting V3 Balanced
+Final validation balanced accuracy: 0.97147
+Probability multipliers: {'Low': 1.0, 'Medium': 0.8, 'High': 2.2}
+
+Upload order suggestion:
+1. submission.csv
+2. submission_more_high.csv if you still have submissions and want to test a slightly stronger High-class correction
+3. submission_less_high.csv if the first two do not improve
