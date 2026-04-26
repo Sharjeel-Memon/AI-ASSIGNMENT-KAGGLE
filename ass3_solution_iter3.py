@@ -12,7 +12,7 @@ It adds:
 
 How to run:
     source venv/bin/activate
-    python ass3_solution_iter3_boosted.py
+    python3 FILENAME
 
 Upload first:
     outputs_iter3_boosted/submission.csv
