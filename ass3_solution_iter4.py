@@ -14,7 +14,7 @@ What this version does:
 
 How to run:
     source venv/bin/activate
-    python ass3_solution_iter4_ensemble.py
+    python3 FILENAME
 
 Upload order suggestion:
     1. outputs_iter4_ensemble/submission_iter4_ensemble.csv
