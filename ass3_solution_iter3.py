@@ -563,18 +563,9 @@ with open(report_notes, "w", encoding="utf-8") as f:
     f.write(f"Final selected model: {best_model_name}\n")
     f.write(f"Final validation balanced accuracy: {best_validation_score:.5f}\n")
     f.write(f"Probability multipliers: {best_multipliers}\n\n")
-    f.write("Upload order suggestion:\n")
-    f.write("1. submission.csv\n")
-    f.write("2. submission_more_high.csv if you still have submissions and want to test a slightly stronger High-class correction\n")
-    f.write("3. submission_less_high.csv if the first two do not improve\n")
 
-print(f"\nSaved report notes: {report_notes}")
 
 print("\n" + "=" * 80)
 print("DONE - ITERATION 3 BOOSTED")
 print("=" * 80)
-print(f"Upload first: {main_file}")
-print("If you have more Kaggle submissions left, try these next:")
-print(f"2nd: {OUTPUT_DIR / 'submission_more_high.csv'}")
-print(f"3rd: {OUTPUT_DIR / 'submission_less_high.csv'}")
 print(f"All Iteration 3 files saved in: {OUTPUT_DIR.resolve()}")
